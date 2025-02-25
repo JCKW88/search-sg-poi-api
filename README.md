@@ -1,40 +1,29 @@
-# My Python Project
+# Search Singapore Place of Interest (POI) API
 
 ## Overview
-This project is a Python application that serves as a template for building and testing Python programs. It includes a main application logic file, a test suite, and a requirements file for managing dependencies.
+This API accepts a query string (i.e. 'q' as the parameter) containing specific requirements (e.g. "Muslim Friendly Salon", "Birthday Party Venues for children", "Fusion Peranakan Cuisine places") and returns a list of relevant results in JSON.
 
-## Project Structure
-```
-my-python-project
-├── src
-│   ├── __init__.py
-│   └── main.py
-├── tests
-│   └── test_main.py
-├── requirements.txt
-└── README.md
-```
+Example:
+https://127.0.0.1:5000/api/search_sg_poi?q="hainan chicken rice"
 
 ## Installation
 To set up the project, clone the repository and install the required dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+Flask==2.0.0
+Werkzeug==2.0.0
+flask_restful==0.3.10
+python-dotenv==1.0.1
+google-generativeai==0.8.4
+requests==2.32.3
 
-## Usage
-To run the application, execute the following command:
+## Required Environment Variables
 
-```bash
-python src/main.py
-```
+| Variable | Description | Example |
+|----------|-------------|---------|
+| GEMINI_API_KEY | API key for Google's Gemini AI service. Obtain from Google AI Studio (https://aistudio.google.com/) | [AIzaSyB4J...] |
+| GEMINI_MODEL_NAME | The name of the Gemini model to use | [gemini-2.0-flash] |
 
-## Running Tests
-To run the tests, use the following command:
+## API Usage
+Using GET method (example):
 
-```bash
-pytest tests/test_main.py
-```
-
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+    https://127.0.0.1:5000/api/search_sg_poi?q="hainan chicken rice"
