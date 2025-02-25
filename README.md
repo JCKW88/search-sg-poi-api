@@ -3,9 +3,6 @@
 ## Overview
 This API accepts a query string (i.e. 'q' as the parameter) containing specific requirements (e.g. "Muslim Friendly Salon", "Birthday Party Venues for children", "Fusion Peranakan Cuisine places") and returns a list of relevant results in JSON.
 
-Example:
-https://127.0.0.1:5000/api/search_sg_poi?q="hainan chicken rice"
-
 ## Installation
 To set up the project, clone the repository and install the required dependencies:
 

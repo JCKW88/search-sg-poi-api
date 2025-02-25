@@ -156,5 +156,6 @@ class SearchSgPOI(Resource):
 
 api.add_resource(SearchSgPOI, '/api/search_sg_poi')
 
+# Use default Google Cloud Run port
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
